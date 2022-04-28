@@ -3,3 +3,12 @@
     height: 100vh;
     background-image: linear-gradient(45, #e2c9be , #fffaea);
 }
+
+.container h1{
+    position: relative;
+    top:30%;
+    left:38%;
+    font-family: 'Tangerine', cursive;
+    font-size: 70px;
+    font-weight: lighter;
+}

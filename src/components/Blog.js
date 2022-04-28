@@ -4,7 +4,7 @@ import './blog.css'
 const Blog = () => {
   return (
     <div className='container'>
-      <h1>No Blogs Available yet</h1>
+      <h1>Sorry, there are no available blogs</h1>
     </div>
   )
 }
