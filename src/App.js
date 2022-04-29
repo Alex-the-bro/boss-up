@@ -1,4 +1,5 @@
 import React from 'react';
+import { AnimatePresence } from 'framer-motion';
 import Header from './components/layout/Header'
 import './App.css';
 import Home from "./components/Home"
@@ -6,16 +7,20 @@ import Episodes from './components/Episodes';
 import Blog from './components/Blog';
 import Contact from './components/Contact'
 import About from './components/About';
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import {Switch, Route, useLocation} from "react-router-dom";
 
 function App() {
+
+  const location = useLocation();
+
   return (
-    <Router>
+    
       <div className="App">
           <Header/>
             <main>
               
-              <Switch>
+             
+              <Switch >
                 
                 <Route exact path='/'>
                   <Home/>
@@ -44,7 +49,7 @@ function App() {
             </main>
           
       </div>
-    </Router>
+    
     
   );
 }

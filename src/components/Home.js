@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion"
+import { animate, motion } from "framer-motion"
 import "../components/home.css"
 import Rec1 from "../rec1.png"
 import Rec2 from "../rec2.png"
@@ -39,16 +39,38 @@ const audioVariants = {
         }
     }
 
+} 
+
+const mainVariants ={
+    initial:{
+       x:0
+    },
+    visible:{
+        
+        x:0,
+        
+        transition:{duration:1.5}
+    }, 
+    exit:{
+        y:"100vw",
+        transition:{type:'tween', duration:1.5}
+    }
+        
+    
 }
 
 
 const Home = ()=>{
     return (
-        <main>
+        <main 
+        >
 
             <div className="text-audio">
             
                 <motion.div
+
+
+
                 initial={{x:"-50vw"}}
                 animate={{x:0}}
                 transition={{type:"spring", delay:0.5 , duration:7, stiffness:100}}
